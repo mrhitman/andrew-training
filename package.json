@@ -1,0 +1,30 @@
+{
+  "name": "b",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "start:dev": "nodemon src/server.js",
+    "migrate": "knex migrate:latest --cwd src",
+    "migrate:down": "knex migrate:rollback --cwd src",
+    "migrate:make": "knex migrate:make --cwd src",
+    "seed": "knex seed:run --cwd src",
+    "seed:make": "knex seed:make --cwd src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jest": "^27.0.5",
+    "knex": "^0.95.6",
+    "objection": "^2.2.15",
+    "pg": "^8.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
